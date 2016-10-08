@@ -10,16 +10,16 @@
 
 
 main(int argc, const char * argv[]) {
-    float fahr, celsius;
+    
+    float fahr, celsius;                                        // celsius to be used for 'while'
     int lower, upper, step;
     
-    lower = 0;          /* lower limit of temperate table */
-    upper = 3000;        /* upper limit */
-    step = 20;          /* step size */
+    lower = 0;                                                  /* lower limit of temperate table */
+    upper = 3000;                                               /* upper limit */
+    step = 20;                                                  /* step size */
     
     
     // Use of While loop
-    
     /*
     fahr = lower;
      while(fahr <= upper){
@@ -30,8 +30,9 @@ main(int argc, const char * argv[]) {
     */
     
     // Use of For loop
-    
     for(fahr = lower; fahr <= upper; fahr+=step){
+        // celsius = (5.0)/(9.0)*(fahr-32.0);                   // legibility
         printf("%6.0f %12.1f\n", fahr, (5.0/9.0)*(fahr-32));
     }
+    
 }
