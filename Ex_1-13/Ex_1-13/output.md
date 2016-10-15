@@ -1,4 +1,6 @@
-We don't have any dog or cat
+Input : We don't have any dog or cat
+
+=========================
 We             ㅁㅁ
 don't          ㅁㅁㅁㅁㅁ
 have           ㅁㅁㅁㅁ
@@ -6,4 +8,5 @@ any            ㅁㅁㅁ
 dog            ㅁㅁㅁ
 or             ㅁㅁ
 cat            ㅁㅁㅁ
+=========================
 Program ended with exit code: 0
