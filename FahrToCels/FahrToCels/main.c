@@ -30,9 +30,18 @@ main(int argc, const char * argv[]) {
     */
     
     // Use of For loop
-    for(fahr = lower; fahr <= upper; fahr+=step){
+    /*for(fahr = lower; fahr <= upper; fahr+=step){
         // celsius = (5.0)/(9.0)*(fahr-32.0);                   // legibility
         printf("%6.0f %12.1f\n", fahr, (5.0/9.0)*(fahr-32));
     }
+    */
+    
+    // Exercise 1-5 : reverse oroder
+    
+     for(fahr = upper; fahr >= lower; fahr -= step){
+        celsius = (5.0)/(9.0)*(fahr-32.0);
+        printf("%6.0f %12.1f\n", fahr, celsius);
+     }
+    
     
 }
