@@ -51,7 +51,10 @@ int main(int argc, const char * argv[]) {
             printf("\n");
             charCount = 0;
             
-            if(c == '\n') break;
+            if(c == '\n') {
+                printf("-------------------------------\n");
+                break;
+            }
         }
     }
     
