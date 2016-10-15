@@ -36,7 +36,7 @@ main(int argc, const char * argv[]) {
     }
     */
     
-    // Exercise 1-5 : reverse oroder
+    // Exercise 1-5 : reverse order
     
      for(fahr = upper; fahr >= lower; fahr -= step){
         celsius = (5.0)/(9.0)*(fahr-32.0);
