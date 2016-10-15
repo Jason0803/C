@@ -42,7 +42,7 @@ int main(int argc, const char * argv[]) {
             for(int i = 0; i < charCount; i++)
                 putchar(word[i]);
             
-            for(int i = 20; i > charCount; i--)
+            for(int i = 15; i > charCount; i--)
                 putchar(' ');
             
             for(int i = 0; i < charCount; i++)
