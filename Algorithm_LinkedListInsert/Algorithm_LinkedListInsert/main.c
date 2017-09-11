@@ -20,6 +20,7 @@ NODE *temp1, *temp2, *temp3, *temp4;
 
 void Initialize(void);
 void InsertNode(NODE *);
+void DeleteNode(NODE *);
 
 void Initialize(void) {
     NODE *ptr;
@@ -65,6 +66,21 @@ void InsertNode(NODE *ptr) {
     indexPtr->Next = ptr;
 }
 
+void DeleteNode(NODE *ptr) {
+    NODE *indexPtr;
+    NODE *deletePtr;
+    
+    for(indexPtr = head; indexPtr != end; indexPtr = indexPtr->Next) {
+        if(indexPtr->Next->Data == ptr->Data) {
+            deletePtr = indexPtr->Next;
+            break;
+        }
+    }
+    
+    indexPtr->Next = indexPtr->Next->Next;
+    free(deletePtr);
+}
+
 
 int main(int argc, const char * argv[]) {
     NODE *ptr;
@@ -87,6 +103,15 @@ int main(int argc, const char * argv[]) {
     ptr = head->Next;
     
     for(int i = 0; i < 5; i++) {
+        printf("%2c", ptr->Data);
+        ptr = ptr->Next;
+    }
+    
+    ptr = head->Next;
+    
+    printf("\n");
+    DeleteNode(temp);
+    for(int i = 0; i < 4; i++){
         printf("%2c", ptr->Data);
         ptr = ptr->Next;
     }
