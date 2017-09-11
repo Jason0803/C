@@ -1,0 +1,26 @@
+import java.util.*;
+import java.awt.*;
+import javax.swing.*;
+
+public class ScoreBoard extends JFrame {
+	public ScoreBoard() {
+		getContentPane().setLayout(null);
+		
+		JPanel panel = new JPanel();
+		panel.setBounds(6, 6, 754, 427);
+		getContentPane().add(panel);
+		panel.setLayout(null);
+		
+		JLabel lblTeamA = new JLabel("Home Team");
+		lblTeamA.setHorizontalAlignment(SwingConstants.CENTER);
+		lblTeamA.setFont(new Font("Lucida Grande", Font.PLAIN, 23));
+		lblTeamA.setBounds(49, 32, 171, 30);
+		panel.add(lblTeamA);
+		
+		JLabel lblAwayTeam = new JLabel("Away Team");
+		lblAwayTeam.setHorizontalAlignment(SwingConstants.CENTER);
+		lblAwayTeam.setFont(new Font("Lucida Grande", Font.PLAIN, 23));
+		lblAwayTeam.setBounds(530, 32, 171, 30);
+		panel.add(lblAwayTeam);
+	}
+}
