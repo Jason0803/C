@@ -8,7 +8,6 @@
 
 #include <stdio.h>
 #include "Node.h"
-#include "Stack.h"
 
 #define MAX 100
 
