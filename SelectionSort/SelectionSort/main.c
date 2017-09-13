@@ -15,6 +15,7 @@
 void MakeRandomNumber(void);
 void SelectionSort(void);
 void InsertionSort(void);
+void QuickSort(int data[], int, int);
 void DisplayBuffer(void);
 int IsNumberExit(int, int);
 int Buf[MAX];
@@ -67,6 +68,50 @@ void InsertionSort(void) {
     }
 }
 
+/*
+void ShellSort(void) {
+    int i, j, h, v;
+    for(h = 0; h < MAX; h= 3*h+1);
+    for(; h > 0; h /= 3) {
+        for(i = h; i < MAX; i++) {
+            v = Buf[i];
+            j = i;
+            
+            while(j >= h && Buf[j-h] > v) {
+                Buf[j] = Buf[j-h];
+                j -= h;
+            }
+            
+            Buf[j] = v;
+        }
+    }
+}
+*/
+
+void QuickSort(int data[], int left, int right) {
+    int num, i, j, temp;
+    if(right > left) {
+        num = data[right];
+        i = left-1;
+        j = right;
+        
+        for(;;) {
+            while(data[++i] < num);
+            while(data[--j] > num);
+                if(i > j) break;
+            
+            temp = data[i];
+            data[i] = data[j];
+            data[j] = temp;
+        }
+        temp = data[i];
+        data[i] = data[right];
+        data[right] = temp;
+        
+        QuickSort(data, left, i-1);
+        QuickSort(data, i+1, right);
+    }
+}
 void DisplayBuffer(void) {
     int i;
     
@@ -99,8 +144,8 @@ int main(int argc, const char * argv[]) {
     
     printf("After Sorting..\n");
     //SelectionSort();
-    InsertionSort();
-    
+    //InsertionSort();
+    QuickSort(Buf, 0, MAX-1);
     DisplayBuffer();
     
     return 0;
