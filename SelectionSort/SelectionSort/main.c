@@ -14,6 +14,7 @@
 
 void MakeRandomNumber(void);
 void SelectionSort(void);
+void InsertionSort(void);
 void DisplayBuffer(void);
 int IsNumberExit(int, int);
 int Buf[MAX];
@@ -50,6 +51,22 @@ void SelectionSort(void) {
     }
 }
 
+void InsertionSort(void) {
+    int i, j, dummy;
+    
+    for(i = 1; i < MAX; i++) {
+        dummy = Buf[i];
+        j = i;
+        
+        while(Buf[j-1] > dummy && j > 0) {
+            Buf[j] = Buf[j-1];
+            j--;
+        }
+        
+        Buf[j] = dummy;
+    }
+}
+
 void DisplayBuffer(void) {
     int i;
     
@@ -81,7 +98,9 @@ int main(int argc, const char * argv[]) {
     DisplayBuffer();
     
     printf("After Sorting..\n");
-    SelectionSort();
+    //SelectionSort();
+    InsertionSort();
+    
     DisplayBuffer();
     
     return 0;
